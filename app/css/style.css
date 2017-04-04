@@ -1,15 +1,13 @@
-
 @font-face {
     font-family: 'luckiestguy';
     src: url('../fonts/luckiestguy.ttf');
-
 }
 
 html, body {
   font-family: 'Acme', sans-serif;
   font-style: normal;
   letter-spacing: 1px;
-    background-color: #b3c7f9;#ecf0f1;*/
+  background: linear-gradient(to bottom, #b3c7f9, #ecf0f1);
     width: 100%;
     height: 100%;
 }
@@ -25,7 +23,6 @@ button {
 #header {
     height: 110px;
     width: 100%;
-    background-color: #b3c7f9;
     margin: 0;
 }
 
@@ -42,10 +39,6 @@ h1 {
     width: 65px;
     margin-top: 20px;
     margin-right: 20px;
-    animation: 10s linear infinite rotating;
-    -webkit-animation: 10s linear infinite rotating;
-    -moz-animation: 10s linear infinite rotating;
-    -ms-animation: 10s linear infinite rotating;
 }
 
 #header .cloud1 {
@@ -60,12 +53,4 @@ h1 {
 #center {
     height: 100%;
     padding: 20px;
-}
-
-#footer {
-    margin: 0;
-    /*background-color: #a5f7f1;*/
-    height: 130px;
-    width: 100%;
-    padding-bottom: 25px;
 }

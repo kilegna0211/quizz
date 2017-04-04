@@ -1,6 +1,6 @@
 #theme {
-  padding-top: 150px;
-  padding-bottom: 100px;
+  padding-top: 120px;
+  padding-bottom: 40px;
 }
 
 #quizz {
@@ -38,51 +38,16 @@ th.ng-binding.answer {
   padding-left: 20px;
 }
 
-.title_quizz.sport {
-  padding-left: 380px;
-}
-
-.title_quizz.general {
-  padding-left: 300px;
-  margin-right: -140px;
-}
-
-.title_quizz.animal {
-  padding-left: 380px;
-  margin-right: -50px;
-}
-
-.title_quizz.geo {
-  padding-left: 370px;
-  margin-right: -80px;
-}
-
-.title_quizz.history {
-  padding-left: 370px;
-  margin-right: -40px;
-}
-
-.title_quizz.science {
-  padding-left: 370px;
-  margin-right: -35px;
-}
-
-.title_quizz.tele {
-  padding-left: 350px;
-  margin-right: -60px;
-
-}
-
 .green {
-  background-color: #e5ffe8;
+  background-color: #c2fcc8;
 }
 
 .red {
-  background-color: #ffe5e5;
+  background-color: #fcc7c7;
 }
 
 .row.third {
-  padding-top: 100px;
+  padding-top: 20px;
 }
 
 #nbr {
@@ -91,10 +56,11 @@ th.ng-binding.answer {
 
 #progress_bar {
   padding-left: 0;
+  padding-right: 0;
 }
 
 .progress-bar {
-  background-color: #f9dbf9;
+  background-color: #fcbafc;
 }
 
 #boutton {
@@ -108,7 +74,7 @@ th.ng-binding.answer {
 }
 
 #boutton:hover {
-  background-color: #f9dbf9;
+  background-color: #fcbafc;
   color: #fff7ff;
   text-shadow: 1px 1px 1px #000;
 }
@@ -127,20 +93,20 @@ outline: none;
     margin: 0px;
     border-radius: 50px;
     background: transparent;
-    border: 2px solid #B3C7F9;
+    border: 2px solid #fcbafc;
     transition: .5s;
     top: 12px;
     left: 40%;
 }
 
 .btn-slide:hover {
-    background-color: #B3C7F9;
+    background-color: #fcbafc;
 }
 
 .btn-slide:hover span.circle {
     left: 100%;
     margin-left: -45px;
-    background-color: #B3C7F9;
+    background-color: #fcbafc;
 }
 
 .btn-slide:hover span.title {
@@ -155,7 +121,7 @@ outline: none;
 
 .btn-slide span.circle {
     display: block;
-    background-color: #B3C7F9;/*#A5F7F1;*/
+    background-color: #fcbafc;
     color: #000;
     text-shadow: 1px 1px 1px #fff7ff;
     position: absolute;
