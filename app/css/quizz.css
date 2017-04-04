@@ -68,13 +68,13 @@ th.ng-binding.answer {
   font-size: 16px;
   width: 100px;
   height: 40px;
-  border-radius: 50px;
+  border-radius: 10px;
   background-color: transparent;
   text-shadow: 1px 1px 1px #fff7ff;
 }
 
 #boutton:hover {
-  background-color: #fcbafc;
+  background-color: #f28af2;
   color: #fff7ff;
   text-shadow: 1px 1px 1px #000;
 }
@@ -93,20 +93,20 @@ outline: none;
     margin: 0px;
     border-radius: 50px;
     background: transparent;
-    border: 2px solid #fcbafc;
+    border: 2px solid #e54be5/*#fcbafc*/;
     transition: .5s;
     top: 12px;
     left: 40%;
 }
 
 .btn-slide:hover {
-    background-color: #fcbafc;
+    background-color: #e54be5;
 }
 
 .btn-slide:hover span.circle {
     left: 100%;
     margin-left: -45px;
-    background-color: #fcbafc;
+    background-color: #e54be5;
 }
 
 .btn-slide:hover span.title {
@@ -121,7 +121,7 @@ outline: none;
 
 .btn-slide span.circle {
     display: block;
-    background-color: #fcbafc;
+    background-color: #ce29ce;
     color: #000;
     text-shadow: 1px 1px 1px #fff7ff;
     position: absolute;
