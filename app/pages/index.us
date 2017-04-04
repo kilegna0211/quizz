@@ -26,7 +26,7 @@
                 <img class="cloud1" src="img/cloud1.svg" alt="cloud" width="110px" height="110px">
             </div>
             <div class="col-xs-7 wild text-center">
-                <h1>Wild Quizz</h1>
+                <h1>The Wild Quizz</h1>
             </div>
             <div class="col-xs-3 text-right">
                 <img class="sun" src="img/yellow_sun.svg" alt="sun">
@@ -42,7 +42,7 @@
         <!--end div section-->
 
         <div id="footer" class="row">
-            
+
         </div>
         <!--end div footer-->
 
