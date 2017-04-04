@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>
+        <%= pkg.name %>
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="<%= css %>" media="all" />
+
+</head>
+
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Acme');
+</style>
+    <div class="container-fluid">
+
+        <div ui-view='navbar'></div>
+
+        <div id="header" class="row">
+            <div class="col-xs-1">
+                <img class="cloud2" src="img/cloud2.svg" alt="cloud" width="100px" height="100px">
+            </div>
+            <div class="col-xs-1">
+                <img class="cloud1" src="img/cloud1.svg" alt="cloud" width="110px" height="110px">
+            </div>
+            <div class="col-xs-7 wild text-center">
+                <h1>Wild Quizz</h1>
+            </div>
+            <div class="col-xs-3 text-right">
+                <img class="sun" src="img/yellow_sun.svg" alt="sun">
+            </div>
+        </div>
+        <!--end div header-->
+
+        <div id="section" class="row">
+            <div id="center" class="col-xs-12">
+                <div ui-view='content'></div>
+            </div>
+        </div>
+        <!--end div section-->
+
+        <div id="footer" class="row">
+            
+        </div>
+        <!--end div footer-->
+
+    </div>
+    <!--end div container-fluid-->
+    <script type="text/javascript" src="<%= js %>"></script>
+</body>
+
+</html>

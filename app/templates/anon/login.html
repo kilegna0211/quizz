@@ -1,0 +1,23 @@
+<div class="login-container">
+    <form class="form-login" name="loginForm" novalidate ng-submit="login()">
+
+				<div ng-repeat="error in errors">{{error.error}}</div>
+
+        <label for="login-input-email" class="login__label">
+				Email address
+				</label>
+
+        <input id=t "login-input-email" class="login__input" ng-model="user.email" required type="email" />
+
+        <label for="login-input-password" class="login__label">
+				Password
+				</label>
+				<input id="login-input-password" ng-model="user.password" required class="login__input" type="password" />
+
+				<label for="login-sign-up" class="login__label--checkbox">
+
+				</label>
+
+        <button type="submit" class="login__submit">Login</button>
+    </form>
+</div>

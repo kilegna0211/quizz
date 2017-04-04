@@ -1,0 +1,2 @@
+{"_id":{"$oid":"58de229a3eda8b0bcaceaf0c"},"email":"admin@mail.com","password":"$2a$10$DDBWeEjTd7DFquk6zgEJUOGe6Al4IV0W95wwb1hj5dicqTjPxfF5C","username":"admin","isAdmin":true,"score":32,"rank":0,"completed":0,"ratio":0,"play_time":0,"__v":0}
+{"_id":{"$oid":"58e2671bfc039613264f17f6"},"email":"guillaume@mail.com","password":"$2a$10$sumfAy5gl0.SiajfaoE2HOM0vKw6xbUug3d9RB1Jd02v.R0gCxgwa","username":"guillaume","isAdmin":true,"score":40,"rank":0,"completed":0,"ratio":0,"play_time":0,"__v":0}

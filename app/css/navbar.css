@@ -1,0 +1,13 @@
+.navbar {
+  margin: 0;
+
+}
+
+.navbar.navbar-default {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+#navbar a:hover {
+  background-color: #f9dbf9;
+}
