@@ -7,14 +7,13 @@
 
 #score {
   padding-top: 30px;
-  padding-left: 50px;
+  padding-left: 80px;
 }
 
 .timer_box {
   border: 6px solid #98b5f9;
-  border-radius: 50%;
   width: 100px;
   height: 100px;
-  border-radius: 50px;
+  border-radius: 10px;
   margin-top: 50px;
 }
