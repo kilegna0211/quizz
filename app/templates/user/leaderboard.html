@@ -4,95 +4,15 @@
 
 <div class="leaderboardList">
 
-    <div class="item">
-        <div class="rank">{{}}</div>
-        <div class="content">
-            <a class="avatar"><img src={{avatarlink}}></a>
-            <div class="rankInfo"><a href={{profilelink}} class="name">{{}}</a></div>
-            <div class="points">{{}}</div>
-        </div>
-    </div>
+  <table>
+<tr ng-repeat="leader in leaders | limitTo:10">
+  <td>{{$index+1}}</td>
+  <td>{{ leader.score }}</td>
+  <td>{{ leader.username }}</td>
 
-    <div class="item">
-        <div class="rank">{{}}</div>
-        <div class="content">
-            <a class="avatar"><img src={{avatarlink}}></a>
-            <div class="rankInfo"><a href={{profilelink}} class="name">{{}}</a></div>
-            <div class="points">{{}}</div>
-        </div>
-    </div>
+</tr>
+</table>
 
-    <div class="item">
-        <div class="rank">{{}}</div>
-        <div class="content">
-            <a class="avatar"><img src={{avatarlink}}></a>
-            <div class="rankInfo"><a href={{profilelink}} class="name">{{}}</a></div>
-            <div class="points">{{}}</div>
-        </div>
-    </div>
-
-    <div class="item">
-        <div class="rank">{{}}</div>
-        <div class="content">
-            <a class="avatar"><img src={{avatarlink}}></a>
-            <div class="rankInfo"><a href={{profilelink}} class="name">{{}}</a></div>
-            <div class="points">{{}}</div>
-        </div>
-    </div>
-
-    <div class="item">
-        <div class="rank">{{}}</div>
-        <div class="content">
-            <a class="avatar"><img src={{avatarlink}}></a>
-            <div class="rankInfo"><a href={{profilelink}} class="name">{{}}</a></div>
-            <div class="points">{{}}</div>
-        </div>
-    </div>
-
-    <div class="item">
-        <div class="rank">{{}}</div>
-        <div class="content">
-            <a class="avatar"><img src={{avatarlink}}></a>
-            <div class="rankInfo"><a href={{profilelink}} class="name">{{}}</a></div>
-            <div class="points">{{}}</div>
-        </div>
-    </div>
-
-    <div class="item">
-        <div class="rank">{{}}</div>
-        <div class="content">
-            <a class="avatar"><img src={{avatarlink}}></a>
-            <div class="rankInfo"><a href={{profilelink}} class="name">{{}}</a></div>
-            <div class="points">{{}}</div>
-        </div>
-    </div>
-
-    <div class="item">
-        <div class="rank">{{}}</div>
-        <div class="content">
-            <a class="avatar"><img src={{avatarlink}}></a>
-            <div class="rankInfo"><a href={{profilelink}} class="name">{{}}</a></div>
-            <div class="points">{{}}</div>
-        </div>
-    </div>
-
-    <div class="item">
-        <div class="rank">{{}}</div>
-        <div class="content">
-            <a class="avatar"><img src={{avatarlink}}></a>
-            <div class="rankInfo"><a href={{profilelink}} class="name">{{}}</a></div>
-            <div class="points">{{}}</div>
-        </div>
-    </div>
-
-    <div class="item">
-        <div class="rank">{{}}</div>
-        <div class="content">
-            <a class="avatar"><img src={{avatarlink}}></a>
-            <div class="rankInfo"><a href={{profilelink}} class="name">{{}}</a></div>
-            <div class="points">{{}}</div>
-        </div>
-    </div>
 
 
 

@@ -13,9 +13,13 @@ app.post('/login', user.connect);
 
 router.get('/score/:id', user.getScore);
 
+router.get('/leaders', user.getLeader);
+
 router.get('/', Auth.isAdministrator, user.findAll);
 
 router.get('/:id', Auth.isAdministrator, user.findById);
+
+router.put('/profile/:id', user.updateProfile);
 
 router.post('/', user.create);
 
