@@ -4,9 +4,23 @@
   <div class="col-xs-8 col-xs-offset-2">
 <div class="well leader">
 
+
 <h3 class="text-center"><img src="img/crown.svg" height="15%" width="15%">Leaderboard</h3>
 
 <div class="leaderboardList">
+
+<div class="leaderboardList">
+
+  <table>
+<tr ng-repeat="leader in leaders | limitTo:10">
+  <td>{{$index+1}}</td>
+  <td>{{ leader.score }}</td>
+  <td>{{ leader.username }}</td>
+
+</tr>
+</table>
+
+
 
   <table>
 <tr ng-repeat="leader in leaders | limitTo:10">
