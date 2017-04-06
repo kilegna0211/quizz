@@ -1,5 +1,7 @@
-h1 {
+h2 {
   text-align: center;
+  color: white;
+  font-size: 50px;
 }
 
 .slider {
@@ -21,7 +23,7 @@ h1 {
 		        transition: all 1s cubic-bezier(0.5, -0.75, 0.2, 1.5);
 	}
 
-	.container {
+	.container.cube {
 		width: inherit;
 		height: inherit;
 		-webkit-transform-style: preserve-3d;
@@ -120,7 +122,7 @@ h1 {
 			}
 
 
-		.container {
+		.container.cube {
 			-webkit-animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
 			animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
 		}
