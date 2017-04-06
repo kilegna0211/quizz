@@ -18,6 +18,7 @@ angular.module('app')
       $scope.results = false;
       $scope.nbrGoodAnswers = 0;
       $scope.nbrFalseAnswers = 0;
+      $scope.nbrPassQuestions = 0;
       // $scope.good_job = true;
       // $scope.bad_job = true;
       // $scope.text_good = "";
@@ -99,6 +100,7 @@ angular.module('app')
                   needStop = true;
                   $scope.hasAnswered = true;
                   $scope.count -= 1;
+                  $scope.nbrPassQuestions += 1;
                   $scope.nextQuestion();
                 };
 

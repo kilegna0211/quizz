@@ -16,9 +16,12 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                <li ui-sref-active="active"><a ui-sref="user.leaderboard" ng-show="auth.isAuthenticated()">Leaderboard</a></li>
-                <li ui-sref-active="active"><a ui-sref="user.gameprofile" ng-show="auth.isAuthenticated()">Profile</a></li>
-                    <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
+                  <li ui-sref-active="active"><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()">Login</a></li>
+                  <li ui-sref-active="active"><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()">Register</a></li>
+                  <li ui-sref-active="active"><a ui-sref="user.leaderboard" ng-show="auth.isAuthenticated()">Leaderboard</a></li>
+                  <li ui-sref-active="active"><a ui-sref="user.gameprofile" ng-show="auth.isAuthenticated()">Profile</a></li>
+
+                  <li ui-sref-active="active"><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
                 </li>
             </ul>
         </div>
