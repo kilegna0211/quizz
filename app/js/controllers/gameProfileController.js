@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('GameProfileController', function($scope, UserService, CurrentUser) {
+    .controller('GameProfileController', function($scope, UserService, CurrentUser, LocalService) {
 
         var userId = CurrentUser.user()._id;
 
@@ -10,17 +10,19 @@ angular.module('app')
 
 
         $scope.newProfile = {
-            username: '',
-            lastname: '',
-            password: '',
-            email: ''
+            username: CurrentUser.user().username,
+            email: CurrentUser.user().email
         };
 
 
         $scope.saveUser = function() {
             console.log($scope.newProfile);
             UserService.updateProfile(userId, $scope.newProfile).then(function(res) {
-                // good
+                var newUser = CurrentUser.user();
+                newUser.username = $scope.newProfile.username;
+                newUser.email = $scope.newProfile.email;
+                LocalService.set('user', JSON.stringify(newUser));
+                location.reload(true);
             }, function(err) {
                 // bad
             });
