@@ -130,6 +130,30 @@ export default class User {
         });
     }
 
+    getEmail(req, res) {
+        model.findById(req.params.id, {
+            password: 0
+        }, (err, user) => {
+            if (err || !user) {
+                res.sendStatus(403);
+            } else {
+                res.json(user);
+            }
+        });
+    }
+
+    getUsername(req, res) {
+        model.findById(req.params.id, {
+            password: 0
+        }, (err, user) => {
+            if (err || !user) {
+                res.sendStatus(403);
+            } else {
+                res.json(user);
+            }
+        });
+    }
+
     getLeader(req, res) {
         model.find({}, {
             password: 0
