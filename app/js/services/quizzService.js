@@ -12,7 +12,7 @@ angular.module('app')
         };
         return {
             get: function(category) {
-                return $http.get('https://opentdb.com/api.php?amount=1&difficulty=easy&category=' + CATEGORY_CODES[category]);
+                return $http.get('https://opentdb.com/api.php?amount=1&category=' + CATEGORY_CODES[category]);
             },
         };
     });

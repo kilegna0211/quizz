@@ -30,7 +30,8 @@ th.ng-binding.question {
   padding-bottom: 20px;
 }
 
-th.ng-binding.answer {
+td.ng-binding.answer:hover {
+  cursor: pointer;
 }
 
 .title_quizz {
@@ -74,7 +75,7 @@ th.ng-binding.answer {
 }
 
 #boutton:hover {
-  background-color: #f28af2;
+  background-color: #7f78db;
   color: #fff7ff;
   text-shadow: 1px 1px 1px #000;
 }
@@ -93,7 +94,7 @@ outline: none;
     margin: 0px;
     border-radius: 50px;
     background: transparent;
-    border: 2px solid #e54be5/*#fcbafc*/;
+    border: 2px solid #6760bc/*#fcbafc*/;
     transition: .5s;
     top: 12px;
     left: 40%;
