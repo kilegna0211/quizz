@@ -19,6 +19,12 @@ angular.module('app')
             getScore: function(id) {
                 return $http.get('/users/score/' + id);
             },
+            getEmail: function(id) {
+                return $http.get('/users/profile/' + id);
+            },
+            getUsername: function(id) {
+                return $http.get('/users/profile/' + id);
+            },
             getLeader: function() {
                 return $http.get('/users/leaders');
             },
