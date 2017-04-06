@@ -40,7 +40,8 @@
                             </thead>
                             <tbody>
                                 <tr ng-repeat="answer in answers">
-                                    <th ng-bind-html="answer | to_trusted" ng-click="checkAnswer(answer)" ng-class="{'green': (answer == good_answer && hasAnswered), 'red': (answer != good_answer && hasAnswered)}" class="answer text-center"></th>
+                                    <td ng-bind-html="answer | to_trusted" ng-click="checkAnswer(answer)" ng-class="{'green': (answer == good_answer && hasAnswered), 'red': (answer != good_answer && hasAnswered)}" class="answer text-center"></td>
+
                                 </tr>
                             </tbody>
                         </table>
@@ -78,6 +79,32 @@
                     </div>
                     <div class="col-xs-1">
                         <div id="nbr">{{nbrQuestion}}/10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="well" ng-show="results">
+                <div class="row">
+                    <div id="result" class="col-xs-12 text-center"><img class="theme" src="img/music.svg" height="10%" width="10%">
+                        <span class="title_quizz music">Music : results</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <span>Good answers: {{nbrGoodAnswers}}</span>
+                        <span>Wrong answers: {{nbrFalseAnswers}}</span>
+                        <span>Your score: {{count}}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-4 restart">
+                      <a ui-sref="user.home"><button id="boutton" class="btn btn-default" type="button" name="button">MENU</button></a>
+                      <button id="boutton" class="btn btn-default" type="button" name="button" ng-click="runQuestion('music')">REPLAY</button>
+
                     </div>
                 </div>
             </div>

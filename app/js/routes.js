@@ -68,7 +68,7 @@ angular.module('app')
                 views: {
                     'content@': {
                         templateUrl: 'user/leaderboard.html',
-                        controller: 'MainController'
+                        controller: 'leaderController'
                     }
                 }
             })
@@ -149,7 +149,7 @@ angular.module('app')
                 views: {
                     'content@': {
                         templateUrl: 'user/gameprofile.html',
-                        controller: 'MainController'
+                        controller: 'GameProfileController'
                     }
                 }
             })

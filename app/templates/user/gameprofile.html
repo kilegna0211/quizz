@@ -11,31 +11,31 @@
             <div class="form-group">
                 <label class="col-lg-3 control-label">Email:</label>
                 <div class="col-lg-8">
-                    <input class="form-control" type="text" value="email@mail.com">
+                    <input class="form-control" type="text" value="email@mail.com" ng-model="newProfile.email">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3 control-label">Username:</label>
                 <div class="col-md-8">
-                    <input class="form-control" type="text" value="username">
+                    <input class="form-control" type="text" value="username" ng-model="newProfile.username">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3 control-label">Password:</label>
                 <div class="col-md-8">
-                    <input class="form-control" type="password" value="11111122333">
+                    <input class="form-control" type="password" value="11111122333" ng-model="newProfile.password">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3 control-label">Confirm password:</label>
                 <div class="col-md-8">
-                    <input class="form-control" type="password" value="11111122333">
+                    <input class="form-control" type="password" value="11111122333" ng-model="newProfile.password">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3 control-label"></label>
                 <div class="col-md-8">
-                    <input type="button" class="btn btn-primary" value="Save Changes">
+                    <input type="button" class="btn btn-primary" value="Save Changes" ng-click="saveUser()">
                     <span></span>
                     <input type="reset" class="btn btn-default" value="Cancel">
                 </div>
@@ -53,15 +53,26 @@
 <!-- edit stat here -->
 
 <div class="col-md-4 stat-container">
-    <h3>Progress statistics</h3>
+    <h3>My infos</h3>
     <div class="stat-box">
+
+        <div class="stat glyphicon glyphicon-user">
+            <b>Username: </b> {{myUsername}}
+        </div>
+        <br>
+
+        <div class="stat glyphicon glyphicon-envelope">
+            <b>Email: </b> {{myEmail}}
+        </div>
+        <br>
+
         <div class="stat glyphicon glyphicon-flash">
             <b>Score: </b> {{myScore}} points
         </div>
         <br>
 
         <div class="stat glyphicon glyphicon-king">
-            <b>Leaderboard position: </b> {{rank}}
+            <b>Leaderboard position: </b> {{$index+1}}
         </div>
         <br>
 

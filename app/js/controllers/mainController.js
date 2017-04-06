@@ -15,13 +15,17 @@ angular.module('app')
       $scope.hidden = true;
       $scope.theme = true;
       $scope.quizz = true;
-      $scope.good_job = true;
-      $scope.bad_job = true;
-      $scope.text_good = "";
-      $scope.text_bad = "";
+      $scope.results = false;
+      $scope.nbrGoodAnswers = 0;
+      $scope.nbrFalseAnswers = 0;
+      // $scope.good_job = true;
+      // $scope.bad_job = true;
+      // $scope.text_good = "";
+      // $scope.text_bad = "";
       $scope.myscore = 0;
       $scope.rank = 0;
       var needStop = false;
+
 
       //initialisation du timer
       var countDown = function() {
@@ -30,7 +34,6 @@ angular.module('app')
             return;
           } else {
             if ($scope.seconds > 0 && $scope.hasAnswered === false){
-
               $scope.seconds -= 1;
               $timeout(countDown, 1000);
             }
@@ -50,6 +53,7 @@ angular.module('app')
                 $scope.quizz = false;
                 $scope.theme = false;
                 $scope.hidden = true;
+                $scope.results = false;
                 $scope.good_job = true;
                 $scope.bad_job = true;
                 nbrQuestion =  nbrQuestion + 1;
@@ -68,9 +72,11 @@ angular.module('app')
                   if (answer == $scope.good_answer) {
                     $scope.good_job = false;
                     $scope.count += 4;
+                    $scope.nbrGoodAnswers += 1;
                   } else {
                     $scope.count -= 2;
                     $scope.bad_job = false;
+                    $scope.nbrFalseAnswers += 1;
                   }
                 };
 //boutton next seulement utilisable quand la réponse a été donnée
@@ -79,6 +85,9 @@ angular.module('app')
                     $scope.seconds = 15;
                     if ($scope.nbrQuestion == 10) {
                       nbrQuestion = 0;
+                      $scope.quizz = true;
+                      $scope.results = true;
+                      $scope.hasAnswered = false;
                     } else {
                       $scope.runQuestion(category);
                       $scope.hasAnswered = false;

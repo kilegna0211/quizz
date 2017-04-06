@@ -20,7 +20,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: radial-gradient(ellipse at left bottom, rgba(179, 199, 249, 1) 59%, rgba(0, 102, 153, .9) 100%);
+	background-image: radial-gradient(ellipse at left bottom, rgba(179, 199, 249, 1) 59%, #697def 100%);
 
 }
 
