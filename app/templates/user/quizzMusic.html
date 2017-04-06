@@ -94,12 +94,33 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-8 col-xs-offset-2">
-                        <span>Good answers: {{nbrGoodAnswers}}</span>
-                        <span>Wrong answers: {{nbrFalseAnswers}}</span>
-                        <span>Your score: {{count}}</span>
+                    <div class="col-xs-4 col-xs-offset-4">
+                      <table class="table_result">
+                        <tbody>
+                          <tr><td class="contenu">Good answers:</td><td class="results text-right">{{nbrGoodAnswers}}</td></tr>
+                          <tr><td class="contenu">Wrong answers:</td><td class="results text-right">{{nbrFalseAnswers}}</td></tr>
+                          <tr><td class="contenu">Skipped questions:</td><td class="results text-right">{{nbrPassQuestions}}</td></tr>
+                          <tr><td class="contenu">Your score:</td><td class="results text-right">{{count}}</td></tr>
+                        </tbody>
+                      </table>
                     </div>
                 </div>
+
+                <div class="row" ng-show="snail">
+                    <div id="joke" class="col-xs-6 col-xs-offset-4">
+                      <img class="img_joke" src="img/snail.svg" height="20%" width="20%">
+                      <span class="joke">You'r a little slow ! </span>
+                    </div>
+                </div>
+
+                <div class="row" ng="skull">
+                    <div id="joke" class="col-xs-6 col-xs-offset-4">
+                      <img class="img_joke" src="img/skull.svg" height="20%" width="20%">
+                      <span class="joke">Are you dead ?</span>
+                    </div>
+                </div>
+
+
                 <div class="row">
                     <div class="col-xs-4 col-xs-offset-4 restart">
                       <a ui-sref="user.home"><button id="boutton" class="btn btn-default" type="button" name="button">MENU</button></a>

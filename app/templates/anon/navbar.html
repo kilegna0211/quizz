@@ -18,10 +18,10 @@
                 <li>
                     <li ui-sref-active="active"><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()">Login</a></li>
                     <li ui-sref-active="active"><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()">Register</a></li>
-                    <!-- <li ui-sref-active="active"><a ui-sref="anon.leaderboard" ng-hide="auth.isAuthenticated()">Leaderboard</a></li>
-                    <li ui-sref-active="active"><a ui-sref="anon.gameprofile" ng-hide="auth.isAuthenticated()">Profile</a></li> -->
+                    <li ui-sref-active="active"><a ui-sref="anon.leaderboard" ng-show="auth.isAuthenticated()">Leaderboard</a></li>
+                    <li ui-sref-active="active"><a ui-sref="anon.gameprofile" ng-show="auth.isAuthenticated()">Profile</a></li>
 
-                    <!-- <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li> -->
+                    <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
                 </li>
             </ul>
         </div>

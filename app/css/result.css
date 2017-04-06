@@ -1,8 +1,34 @@
 #result {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 .restart {
   padding-left: 60px;
-  padding-top: 40px;
+}
+
+.table_result {
+  font-size: 20px;
+}
+
+.results {
+  padding: 0;
+  width: 50px;
+}
+
+.contenu {
+  padding-left: 38px;
+}
+
+#joke {
+  padding-left: 20px;
+  padding-top: 50px;
+}
+
+.joke {
+  font-size: 24px;
+}
+
+.img_joke {
+  margin-right: 10px;
+  margin-left: 20px;
 }
