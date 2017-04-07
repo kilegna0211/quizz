@@ -40,7 +40,8 @@
                             </thead>
                             <tbody>
                                 <tr ng-repeat="answer in answers">
-                                    <th ng-bind-html="answer | to_trusted" ng-click="checkAnswer(answer)" ng-class="{'green': (answer == good_answer && hasAnswered), 'red': (answer != good_answer && hasAnswered)}" class="answer text-center"></th>
+                                    <td ng-bind-html="answer | to_trusted" ng-click="checkAnswer(answer)" ng-class="{'green': (answer == good_answer && hasAnswered), 'red': (answer != good_answer && hasAnswered)}" class="answer text-center"></td>
+
                                 </tr>
                             </tbody>
                         </table>
@@ -50,10 +51,7 @@
                         <button ng-hide="hidden" ng-model="hidden" id="boutton" class="btn btn-default" type="button" name="button" ng-click="nextQuestion()">NEXT</button>
                         <button ng-show="hidden" ng-model="hidden" id="boutton" class="btn btn-default" type="button" name="button" ng-click="passQuestion()">PASS</button>
                     </div>
-                    <!-- <div class="col-xs-2">
-                <div class="col-xs-4 response" ng-hide="good_job" ng-model="good_job"><img src="img/smiley.svg" height="30%" width="30%"><span ng-model="text_good">{{text_good}}</span></div>
-                <div class="col-xs-4 response" ng-hide="bad_job" ng-model="bad_job"><img src="img/sheep.svg" height="30%" width="30%"><span ng-model="text_bad">{{text_bad}}</span></div>
-            </div> -->
+
                 </div>
             </div>
         </div>
@@ -66,7 +64,7 @@
             <div class="well" ng-hide="quizz" ng-model="quizz">
                 <div class="row third">
                     <div id="count" class="col-xs-2 text-right">
-                        <div><img src="img/pig.svg" height="20%" width="20%"><span class="score">SCORE: {{count}}</span></div>
+                        <div><img class="coin_score" src="img/coin.svg" height="18%" width="18%"><span class="score">SCORE: {{count}}</span></div>
                     </div>
 
                     <div id="progress_bar" class="col-xs-4 col-xs-offset-2">
@@ -79,9 +77,81 @@
                     <div class="col-xs-1">
                         <div id="nbr">{{nbrQuestion}}/10</div>
                     </div>
+                    <div class="col-xs-2 col-xs-offset-1">
+                        <div class="player"><img class="img_player" src="img/user.svg" height="24%" width="24%">{{user.username}}</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-</div>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="well" ng-show="results">
+                <div class="row">
+                    <div id="result" class="col-xs-12 text-center"><img class="theme" src="img/dino.svg" height="10%" width="10%">
+                        <span class="title_quizz history">History : results</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-4">
+                      <table class="table_result">
+                        <tbody>
+                          <tr><td class="contenu">Good answers:</td><td class="results text-right">{{nbrGoodAnswers}}</td></tr>
+                          <tr><td class="contenu">Wrong answers:</td><td class="results text-right">{{nbrFalseAnswers}}</td></tr>
+                          <tr><td class="contenu">Skipped questions:</td><td class="results text-right">{{nbrPassQuestions}}</td></tr>
+                          <tr><td class="contenu">Your score:</td><td class="results text-right">{{count}}</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="snail">
+                    <div id="joke" class="col-xs-6 col-xs-offset-4">
+                      <img class="img_joke" src="img/snail.svg" height="20%" width="20%">
+                      <span class="joke"> You're a little slow ! </span>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="skull">
+                    <div id="joke" class="col-xs-6 col-xs-offset-4">
+                      <img class="img_joke" src="img/skull.svg" height="20%" width="20%">
+                      <span class="joke"> Are you dead ?</span>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="smiley">
+                    <div id="joke" class="col-xs-6 col-xs-offset-4">
+                      <img class="img_joke" src="img/smiley.svg" height="20%" width="20%">
+                      <span class="joke"> You're good !</span>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="chicken">
+                    <div id="joke" class="col-xs-6 col-xs-offset-4">
+                      <img class="img_joke" src="img/chicken.svg" height="20%" width="20%">
+                      <span class="joke"> No comment !</span>
+                    </div>
+                </div>
+
+                <div class="row" ng-show="genius">
+                    <div id="joke" class="col-xs-6 col-xs-offset-4">
+                      <img class="img_joke" src="img/brain.svg" height="20%" width="20%">
+                      <span class="joke">You're a Genius !</span>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-4 restart">
+                      <a ui-sref="user.home"><button id="boutton" class="btn btn-default" type="button" name="button">MENU</button></a>
+                      <button id="boutton" class="btn btn-default" type="button" name="button" ng-click="runQuestion('history')">REPLAY</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+  </div>

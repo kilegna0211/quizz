@@ -84,6 +84,14 @@ td.ng-binding.answer:hover {
 outline: none;
 }
 
+.player {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.img_player {
+  padding-right: 10px;
+}
 /*play button*/
 .btn-slide {
     position: relative;

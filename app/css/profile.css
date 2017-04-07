@@ -1,0 +1,46 @@
+.profile {
+  font-size: 28px;
+  padding-bottom: 30px;
+}
+
+.save {
+  background-color: #fcbafc;
+}
+.save:hover {
+  background-color: #7f78db;
+}
+
+.infos {
+  font-size: 18px;
+}
+
+.info {
+  padding-left: 40px;
+}
+
+.username {
+  padding-left: 20px;
+}
+
+.mail {
+  padding-left: 23px;
+}
+
+.coin {
+  margin-left: -9px;
+}
+
+.score {
+  padding-left: 17px;
+}
+
+.control-label {
+ padding-right: 0;
+ margin-right: 20px;
+ font-size: 18px;
+}
+
+.save_change {
+  padding-left: 0;
+  padding-top: 10px;
+}

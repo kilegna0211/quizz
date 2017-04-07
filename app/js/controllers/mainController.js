@@ -4,6 +4,7 @@ angular.module('app')
       //initialisation du quizz
       var nbrQuestion = 0;
       var userId = CurrentUser.user()._id;
+
       $scope.good_answer = "";
       $scope.false_answer = "";
       $scope.question = "";
@@ -19,14 +20,14 @@ angular.module('app')
       $scope.nbrGoodAnswers = 0;
       $scope.nbrFalseAnswers = 0;
       $scope.nbrPassQuestions = 0;
-      // $scope.good_job = true;
-      // $scope.bad_job = true;
-      // $scope.text_good = "";
-      // $scope.text_bad = "";
-      $scope.myscore = 0;
       $scope.rank = 0;
       var needStop = false;
-
+      $scope.user = CurrentUser.user();
+      $scope.smiley = false;
+      $scope.skull = false;
+      $scope.snail = false;
+      $scope.chicken = false;
+      $scope.genius = false;
 
       //initialisation du timer
       var countDown = function() {
@@ -51,6 +52,11 @@ angular.module('app')
       $scope.runQuestion = function(category) {
           QuizzService.get(category).then(function(res) {
                 $timeout(countDown, 1000);
+                $scope.smiley = false;
+                $scope.skull = false;
+                $scope.snail = false;
+                $scope.chicken = false;
+                $scope.genius = false;
                 $scope.quizz = false;
                 $scope.theme = false;
                 $scope.hidden = true;
@@ -68,16 +74,24 @@ angular.module('app')
 
 //verification de la réponse et ajout/debit des points
                 $scope.checkAnswer = function (answer) {
-                  $scope.hidden = false;
-                  $scope.hasAnswered = true;
-                  if (answer == $scope.good_answer) {
-                    $scope.good_job = false;
-                    $scope.count += 4;
-                    $scope.nbrGoodAnswers += 1;
-                  } else {
-                    $scope.count -= 2;
-                    $scope.bad_job = false;
-                    $scope.nbrFalseAnswers += 1;
+                  if(!$scope.hasAnswered) {
+                    $scope.hidden = false;
+                    $scope.hasAnswered = true;
+                    if (answer == $scope.good_answer) {
+                      $scope.good_job = false;
+                      $scope.count += 4;
+                      $scope.nbrGoodAnswers += 1;
+                      UserService.updateScore(userId, 4).then(function (res){
+                        // Ok
+                      })
+                    } else {
+                      $scope.count -= 2;
+                      $scope.bad_job = false;
+                      $scope.nbrFalseAnswers += 1;
+                      UserService.updateScore(userId, -2).then(function (res){
+                        // Ok
+                      })
+                    }
                   }
                 };
 //boutton next seulement utilisable quand la réponse a été donnée
@@ -101,22 +115,27 @@ angular.module('app')
                   $scope.hasAnswered = true;
                   $scope.count -= 1;
                   $scope.nbrPassQuestions += 1;
+                  UserService.updateScore(userId, -1).then(function (res){
+                    // Ok
+                  })
                   $scope.nextQuestion();
                 };
 
-          });
-        };
 
-        UserService.getScore(userId).then(function(res) {
-              $scope.myScore = res.data.score;
-          });
+              if($scope.nbrGoodAnswers === 0) {
+                $scope.skull = true;
+              } if($scope.nbrGoodAnswers >0 && $scope.nbrGoodAnswers<=3){
+                $scope.chicken = true;
+              } if($scope.nbrGoodAnswers >3 && $scope.nbrGoodAnswers<=5){
+                $scope.snail = true;
+              } if($scope.nbrGoodAnswers >5 && $scope.nbrGoodAnswers<=7){
+                $scope.smiley = true;
+              } if($scope.nbrGoodAnswers >=8){
+                $scope.genius = true;
+              }
 
-          var updateScore = function(point) {
-            // TODO: Attention pensez à remplacer "58de229a3eda8b0bcaceaf0c" par user._id lorsque le quizz ne pourra se faire sous connexion
-            UserService.updateScore(userId, point).then(function(res) {
-
-            }, function(err) {
 
             });
         };
+
  });//end controller

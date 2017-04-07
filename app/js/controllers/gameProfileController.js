@@ -2,7 +2,16 @@ angular.module('app')
     .controller('GameProfileController', function($scope, UserService, CurrentUser, LocalService) {
     var userId = CurrentUser.user()._id;
 
-    $scope.myscore = 0;
+    var updateScore = function(point) {
+        // TODO: Attention pensez à remplacer "58de229a3eda8b0bcaceaf0c" par user._id lorsque le quizz ne pourra se faire sous connexion
+        UserService.updateScore(userId, point).then(function(res) {
+
+        }, function(err) {
+
+        });
+    };
+
+
     $scope.leaders = [];
     $scope.myUsername = '';
     $scope.myEmail = '';
@@ -43,13 +52,5 @@ angular.module('app')
         $scope.myScore = res.data.score;
     });
 
-    var updateScore = function(point) {
-        // TODO: Attention pensez à remplacer "58de229a3eda8b0bcaceaf0c" par user._id lorsque le quizz ne pourra se faire sous connexion
-        UserService.updateScore(userId, point).then(function(res) {
-
-        }, function(err) {
-
-        });
-    };
 
 }); //end controller

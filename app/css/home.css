@@ -1,6 +1,13 @@
-h1 {
+h2 {
+  padding-bottom: 30px;
+  font-family: 'Acme', 'luckiestguy', sans-serif;
+  letter-spacing: 3px;
+  color: #fff7ff;
+  font-size: 3.5em;
+  text-shadow: 0.1px 0px 0.2px grey;
   text-align: center;
 }
+
 .slider {
     position: absolute;
   padding-top: 150px;
@@ -153,3 +160,11 @@ h1 {
     .btn-primary {
       background-color: #98b5f9;
     }
+
+    button:focus {
+    outline: none;
+    }
+
+a:hover {
+  text-decoration: none;
+}
