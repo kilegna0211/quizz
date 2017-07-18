@@ -4,10 +4,9 @@
 }
 
 html, body {
-  font-family: 'Acme', sans-serif;
   font-style: normal;
   letter-spacing: 1px;
-  background: linear-gradient(to bottom, #b3c7f9, #ecf0f1);
+  background: linear-gradient(to bottom, black, white);
     width: 100%;
     height: 100%;
 }
