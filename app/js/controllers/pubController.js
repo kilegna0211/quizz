@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('AgendaController', function($scope, CurrentUser, UserService, LocalService, pubService, $location) {
+    .controller('PubController', function($scope, CurrentUser, UserService, LocalService, CreateService, $location) {
         UserService.getOne(CurrentUser.user()._id).then(function(res) {
             $scope.user = res.data;
         });

@@ -1,5 +1,5 @@
 import express from 'express';
-import pub from '../models/pub.js';
+import pub from '../models/createads.js';
 import Auth from '../middlewares/authorization.js';
 
 let router = express.Router();

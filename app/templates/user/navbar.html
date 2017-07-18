@@ -16,6 +16,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
+                  <li ui-sref-active="active"><a ui-sref="user.pub" ng-show="auth.isAuthenticated()">Publicités</a></li>
+                  <li ui-sref-active="active"><a ui-sref="user.createads" ng-show="auth.isAuthenticated()">Création publicité</a></li>
                   <li ui-sref-active="active"><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()">Login</a></li>
                   <li ui-sref-active="active"><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()">Register</a></li>
                   <li ui-sref-active="active"><a ui-sref="user.profile" ng-show="auth.isAuthenticated()">Profile</a></li>
