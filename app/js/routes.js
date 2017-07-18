@@ -54,6 +54,16 @@ angular.module('app')
                     access: AccessLevels.user
                 }
             })
+            .state('user.pub', {
+                url: '/pub',
+                views: {
+                    'content@': {
+                        templateUrl: 'user/pub.html',
+                        controller: 'PubController'
+                    }
+                }
+            })
+
             .state('user.home', {
                 url: '/',
                 views: {
@@ -63,15 +73,17 @@ angular.module('app')
                     }
                 }
             })
-          
-            .state('user.profile', {
-                url: '/profile',
+
+            .state('user.createads', {
+                url: '/createads',
                 views: {
                     'content@': {
-                        templateUrl: 'user/profile.html',
-                        controller: 'ProfileController'
+                        templateUrl: 'user/createads.html',
+                        controller: 'CreateController'
                     }
                 }
             });
+
+
         $urlRouterProvider.otherwise('/');
     });

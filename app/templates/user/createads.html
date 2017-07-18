@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <h1 class="title_home center-align">CREATION PUB</h1>
+        <div class="col offset-s4 s4 offset-m5 m2 offset-l5 l2 divider_title "></div>
+    </div>
+    <div class="container">
+            <div class="row">
+                <div class="input-field col s12 col l12">
+                    <input id="icon_prefix2" ng-model="name" class="materialize-input" type="text" required>
+                    <label for="icon_prefix2" data-error="wrong" data-success="right">Nom de la pub</label>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col s12 col l12">
+                    <div class="input-field">
+                        <select name="type" ng-model="typepub" required>
+                          <option>automobile</option>
+                          <option>mode</option>
+                          <option>hi-tech</option>
+                          <option>video-games</option>
+                          <option>sport</option>
+                          <option>cinema</option>
+                          <option>adult</option>
+                          <option>social</option>
+                          <option>service</option>
+                        </select>
+                    </div>
+                    <div ng-show='validate'>
+                        <div class="left messages" ng-message="required">Sélectionnez une catégorie</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col s12 col l12">
+                <button class="btn waves-effect waves-light orange validate right" type="submit">Valider<i</button>
+            </div>
+        </form>
+    </div>
+</div>

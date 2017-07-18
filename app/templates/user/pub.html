@@ -1,0 +1,16 @@
+<div class="row">
+  <h1 class="title_home center-align">AGENDA</h1>
+  <div class="col offset-s4 s4 offset-m5 m2 offset-l5 l2 divider_title "></div>
+</div>
+<div class="container">
+    <ul class="collection pub_newagenda hoverable" ng-click="moveTopub(pub._id)" ng-repeat="pub in pubs | orderBy:'startDate'">
+      <li class="collection-item avatar">
+        <img src="/../img/{{pub.categorie}}.png" alt="" class="circle">
+        <span class="title">{{pub.name | uppercase}}</span>
+        <p>{{pub.startDate | date:' dd/MM/yyyy'}} - {{pub.startTime | date:' HH:mm' }}</p>
+        <p>{{pub.adresse}}</p>
+        <p>{{pub.description}}</p>
+        <a class="secondary-content"><i class="material-icons">info_outline</i></a>
+      </li>
+    </ul>
+</div>
